@@ -1,0 +1,39 @@
+footer {
+    background-color: #353535;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer h4 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.24px;
+    margin: 0;
+}
+
+.footer-index {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+}
+
+.footer-index ul {
+    padding-left: 0;
+}
+
+.footer-index li {
+    padding-bottom: 8px;
+}
+
+.footer-index .icon-footer {
+    margin-right: 5px;
+}
+
+.footer-index .index-bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-left: 5px;
+}

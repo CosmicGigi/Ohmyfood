@@ -1,32 +1,4 @@
 @charset "UTF-8";
-/*** Body & HTML ***/
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  margin: 0;
-}
-
-img {
-  object-fit: cover;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/*** HEADER ***/
 header {
   background-color: #ffffff;
   position: relative;
@@ -41,7 +13,7 @@ header {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-/*** SECTION LOCATION ***/
+/*** location section ***/
 .location {
   background-color: #EAEAEA;
   height: 50px;
@@ -66,7 +38,7 @@ header {
   line-height: 18.75px;
 }
 
-/*** SECTION FONCTIONNEMENT ***/
+/*** explore section***/
 .explore {
   text-align: center;
   padding: 20px;
@@ -106,14 +78,12 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
-/*** FONCTIONNEMENTS ***/
 .howto {
   height: 440px;
   color: #000000;
   padding: 25px 15px;
-  display: block;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -164,7 +134,7 @@ header {
   color: #9356DC;
 }
 
-/*** RESTAURANTS ***/
+/*** restaurants section ***/
 .restaurants {
   background-color: #F6F6F6;
   padding: 30px 15px;
@@ -239,29 +209,30 @@ header {
 }
 
 .icon-like {
+  position: absolute;
   width: 22px;
   height: 21px;
-  position: absolute;
 }
 
-.icon-like .fa-solid {
+.icon-like-full {
   opacity: 0;
-  color: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
 }
 
-.fa-solid:hover {
+.icon-like-full:hover {
   opacity: 1;
+  color: transparent;
   transition: 0.3s ease-in-out;
-  color: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
 }
 
-/*** FOOTER ***/
 footer {
   background-color: #353535;
   color: #ffffff;
-  height: 186px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 footer h4 {
@@ -269,25 +240,60 @@ footer h4 {
   font-size: 18px;
   font-weight: 400;
   line-height: 26.24px;
+  margin: 0;
 }
 
-.linorm {
+.footer-index {
   font-size: 16px;
   font-weight: 400;
   line-height: 18.75px;
+}
+
+.footer-index ul {
+  padding-left: 0;
+}
+
+.footer-index li {
+  padding-bottom: 8px;
+}
+
+.footer-index .icon-footer {
+  margin-right: 5px;
+}
+
+.footer-index .index-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
   list-style-type: none;
 }
 
-.linorm .li-bold {
-  font-weight: 500;
-}
-
 /*** resume
--creer le footer en column 
 -faire les parties responsives
--implémenter le scss (copie du css, nesting, etc)
--color survol like
--revoir le bouton au survol
+-modifier li en button (voir 1er button explore) et restaurants en exemple
 -voir le loader
 -creation des autres pages
 -voir comment améliorer le code ***/
