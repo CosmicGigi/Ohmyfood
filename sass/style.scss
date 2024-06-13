@@ -7,8 +7,19 @@
 @import "utils/variables.scss";
 
 /*** resume
--faire les parties responsives
--modifier li en button (voir 1er button explore) et restaurants en exemple
--voir le loader
--creation des autres pages
+-modifier scss (variable, nesting, media query)
+-modifier les li howto en button puis creer mixins pour button gradient et button howto car similitude dans les menus
+-voir le loader:
+
+HTML
+avant header
+<div class=loader></div>
+
+CSS
+.loader
+
+-autres animations:
+apres span
+<i class...> 
+
 -voir comment améliorer le code ***/

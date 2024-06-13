@@ -82,9 +82,6 @@ header {
   height: 440px;
   color: #000000;
   padding: 25px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .howto h2 {
@@ -93,11 +90,16 @@ header {
   line-height: 28.13px;
 }
 
+.howto-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .howto-btn {
   width: 335px;
   height: 72.38px;
   border-radius: 20px;
-  list-style-type: none;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin: 30px;
@@ -105,6 +107,7 @@ header {
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
+  padding-left: 0;
 }
 
 .howto-btn li {
@@ -267,6 +270,20 @@ footer h4 {
   margin-left: 5px;
 }
 
+header {
+  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  padding: 5px;
+  position: sticky;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -292,10 +309,21 @@ li {
 }
 
 /*** resume
--faire les parties responsives
--modifier li en button (voir 1er button explore) et restaurants en exemple
--voir le loader
--creation des autres pages
+-modifier scss (variable, nesting, media query)
+-modifier les li howto en button puis creer mixins pour button gradient et button howto car similitude dans les menus
+-voir le loader:
+
+HTML
+avant header
+<div class=loader></div>
+
+CSS
+.loader
+
+-autres animations:
+apres span
+<i class...> 
+
 -voir comment améliorer le code ***/
 
 /*# sourceMappingURL=style.css.map */

@@ -43,9 +43,6 @@
     height: 440px;
     color: #000000;
     padding: 25px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .howto h2 {
@@ -54,11 +51,17 @@
     line-height: 28.13px;
 }
 
+.howto-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 .howto-btn {
     width: 335px;
     height: 72.38px;
     border-radius: 20px;
-    list-style-type: none;
     background-color: #F6F6F6;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     margin: 30px;
@@ -66,6 +69,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 18.75px;
+    padding-left: 0;
 }
 
 .howto-btn li {
@@ -88,6 +92,7 @@
 .icon-howto {
     color: #7E7E7E;
     padding-right: 20px;
+
 }
 
 .icon__howto--purple {
