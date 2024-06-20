@@ -1,0 +1,17 @@
+/*** shadow ***/
+@mixin light-shadow {
+    box-shadow: 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin medium-shadow {
+    box-shadow: 4px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin dark-shadow {
+    box-shadow: 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+/*** article fonctionnement et menu ***/
+@mixin generic {
+    
+}

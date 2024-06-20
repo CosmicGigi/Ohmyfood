@@ -1,0 +1,39 @@
+header {
+    background-color: #ffffff;
+    display: block;
+    flex-direction: column;
+    padding: 20px;
+    height: 63px;
+}
+.menu-logo {
+
+    img {
+        width: 197px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+/*** location section ***/
+
+.location {
+    background-color: #EAEAEA;
+    color: $darker-grey;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    .location__icon {
+        width: 12px;
+        height: 16px;
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18.75px;
+        }
+    }
+}

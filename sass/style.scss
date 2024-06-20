@@ -1,25 +1,18 @@
-@import "layout/header.scss";
-@import "layout/main.scss";
-@import "layout/footer.scss";
-@import "pages/menu.scss";
-@import "utils/main.scss";
-@import "utils/mixins.scss";
-@import "utils/variables.scss";
+@import "utils/_variables.scss";
+@import "utils/_mixins.scss";
+@import "utils/_main.scss";
+@import "layout/_header.scss";
+@import "layout/_main.scss";
+@import "layout/_footer.scss";
+@import "pages/_menu.scss";
+
+
+
 
 /*** resume
--modifier scss (variable, nesting, media query)
--modifier les li howto en button puis creer mixins pour button gradient et button howto car similitude dans les menus
--voir le loader:
-
-HTML
-avant header
-<div class=loader></div>
-
-CSS
-.loader
-
--autres animations:
-apres span
-<i class...> 
-
--voir comment améliorer le code ***/
+-responsive ok (à ameliorer et terminer aujourd'hui)
+-faire un <article> générique avec mixins (à commencer aujourd'hui)
+-loader (full page à terminer aujourd'hui)
+-animation des repas (dossier.scss + ajouter dans menu des restaurants)
+-voir comment améliorer le code et veille
+-travailler sur soutenance ***/
