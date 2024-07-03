@@ -1,8 +1,46 @@
 @charset "UTF-8";
+/*** menu apparition ***/
+@keyframes apparition {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/*** loader ***/
+@keyframes load {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+/**loader
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}**/
+/*** fontawesome spin ***/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /***color***/
 /***shadow***/
 /*** shadow ***/
-/*** article fonctionnement et menu ***/
 * {
   margin: 0;
   box-sizing: border-box;
@@ -29,21 +67,26 @@ li {
   list-style-type: none;
 }
 
-header {
-  background-color: #ffffff;
-  display: block;
-  flex-direction: column;
-  padding: 20px;
-  height: 63px;
+.logo {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-
-.menu-logo img {
+.logo img {
+  padding: 15px;
   width: 197px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .logo img {
+    padding: 30px;
+    width: 200px;
+  }
 }
 
 /*** location section ***/
 .location {
+  position: relative;
   background-color: #EAEAEA;
   color: #353535;
   height: 50px;
@@ -54,6 +97,11 @@ header {
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .location {
+    box-shadow: none;
+  }
 }
 .location .location__icon {
   width: 12px;
@@ -76,6 +124,11 @@ header {
   font-weight: 700;
   line-height: 28.13px;
   padding: 30px 0;
+}
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .explore h2 {
+    font-size: 40px;
+  }
 }
 
 .explore p {
@@ -114,6 +167,11 @@ header {
   flex-direction: column;
   justify-content: space-around;
 }
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .howto {
+    height: 220px;
+  }
+}
 .howto h2 {
   font-size: 24px;
   font-weight: 700;
@@ -124,9 +182,14 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   padding: 30px 0;
   gap: 30px;
+}
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .howto__list {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 .howto__list .howto__btn {
   width: 335px;
@@ -143,22 +206,6 @@ header {
   padding: 8px;
 }
 
-/***
-@media screen and (min-width: 680px) {
-    .howto {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: auto;
-        .howto__list {
-            flex-direction: row;
-            justify-content: space-around;
-            width: 100%;
-        }
-    }
-}
-***/
 .icon__nbr {
   position: relative;
   top: 35%;
@@ -195,6 +242,11 @@ header {
   width: 100%;
   padding: 30px 0;
 }
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .restaurants-list {
+    flex-direction: row;
+  }
+}
 .restaurants-list .card {
   width: 340px;
   height: 251px;
@@ -202,27 +254,17 @@ header {
   border-radius: 15px;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .restaurants-list .card {
+    width: 490px;
+  }
+}
 .restaurants-list .card img {
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0 0;
 }
 
-/***
-    @media screen and (min-width: 680px) {
-        .restaurants {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            .restaurants-list {
-                flex-direction: row;
-                align-items: space-around;
-                width: 100%;
-        }
-    }
-}
-***/
 .card-content {
   color: #000000;
   padding: 0 15px;
@@ -259,6 +301,11 @@ header {
   font-weight: 500;
   line-height: 16.41px;
 }
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .new-place {
+    left: 370px;
+  }
+}
 .new-place p {
   margin: 0;
   padding: 8px;
@@ -268,6 +315,11 @@ header {
   position: relative;
   bottom: 45px;
   left: 280px;
+}
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .heart {
+    left: 420px;
+  }
 }
 .heart .icon-like {
   position: absolute;
@@ -282,7 +334,7 @@ header {
 }
 .icon-like-full.icon-like-full:hover {
   opacity: 1;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
 }
@@ -294,6 +346,13 @@ footer {
   flex-direction: column;
   padding: 20px;
 }
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 100px;
+  }
+}
 footer h4 {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
@@ -301,15 +360,12 @@ footer h4 {
   line-height: 26.24px;
   margin: 0;
 }
-
-/***
-@media (min-width: 680px) and (max-width: 1440px) {
-    footer {
-        flex-direction: row-reverse;
-
-    }
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  footer h4 {
+    padding-left: 20px;
+  }
 }
-***/
+
 .footer__index {
   font-size: 16px;
   font-weight: 400;
@@ -318,8 +374,19 @@ footer h4 {
 .footer__index ul {
   padding-left: 20px;
 }
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .footer__index ul {
+    display: flex;
+    gap: 10px;
+  }
+}
 .footer__index ul li {
   padding-bottom: 8px;
+}
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .footer__index ul li {
+    padding-bottom: 0;
+  }
 }
 
 .icon__footer {
@@ -332,15 +399,18 @@ footer h4 {
   margin-left: 5px;
 }
 
-.main-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+body {
+  margin: 0;
 }
 
-header {
+.menu-container {
+  width: 100%;
+}
+
+.header-menu {
   background-color: #ffffff;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   height: 63px;
@@ -348,14 +418,17 @@ header {
 
 .back-btn {
   color: #353535;
+  position: absolute;
+  left: 17px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
 }
 
 .menu-logo {
   display: flex;
   justify-content: center;
-  position: absolute;
-  left: 25%;
-  right: 25%;
+  margin: -25px;
 }
 .menu-logo img {
   width: 197px;
@@ -363,45 +436,43 @@ header {
 
 .menu-photo img {
   width: 100%;
+  height: 383px;
 }
 
 .main-menu {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: whitesmoke;
-  border-radius: 40px;
+  border-radius: 40px 40px 0 0;
   margin-top: -40px;
   position: relative;
   padding: 20px;
   width: 100%;
 }
-
 .name {
-  display: block;
-  justify-content: space-around;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .name {
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 .logo-name {
   font-family: "Shrikhand", cursive;
 }
 
-/***.heart {
-
-
-    .icon-like {
-        width: 22px;
-        height: 21px;
-    }
-}
-***/
-.icon-like-full {
+.icon-like-menu-full {
   opacity: 0;
   color: transparent;
   background-clip: text;
 }
-.icon-like-full.icon-like-full:hover {
+.icon-like-menu-full.icon-like-menu-full:hover {
   opacity: 1;
   transition: 0.3s ease-in-out;
   background: linear-gradient(#9356DC, #FF79DA);
@@ -412,69 +483,118 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  width: 100%;
+  transform: translateX(-1000px);
+  margin-bottom: 40px;
 }
 
+.delay-one {
+  animation: apparition 0.75s 1s ease forwards;
+}
+
+.delay-two {
+  animation: apparition 0.75s 2s ease forwards;
+}
+
+.delay-three {
+  animation: apparition 0.75s 3s ease forwards;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18.75px;
+}
+
+.green-line {
+  width: 40px;
+  border-bottom: 3px #99E2D0 solid;
+  margin-bottom: 20px;
+}
+
+/*** card ***/
 .menu-card {
-  width: 335px;
-  height: 72.38px;
-  border-radius: 20px;
-  background-color: #F6F6F6;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-}
-.menu-card .menu-content {
-  width: 100%;
   display: flex;
-  flex-direction: column;
-}
-.menu-card .menu-content .menu-script {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  background: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  overflow: hidden;
+  width: 349px;
+}
+@media screen and (min-width: 700px) and (max-width: 1440px) {
+  .menu-card {
+    width: 634px;
+  }
+}
+.menu-card:hover .pricecheck {
+  transform: translateX(-60px);
+}
+.menu-card:hover .menu-script {
+  width: 70%;
 }
 
-.price {
+.menu-script {
+  padding: 15px 0 15px 15px;
+  width: 100%;
+}
+
+.menu-card h4, p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu-script h4 {
+  font-weight: 500;
+}
+
+.menu-script p {
+  font-weight: 300;
+  font-size: 15.04px;
+}
+
+.pricecheck {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+
+.pricecheck p {
+  margin-bottom: -25px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 15.04px;
   font-weight: 700;
-  padding: 15px;
   color: #353535;
-  align-items: flex-end;
 }
 
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100px);
-  }
-}
-.slide {
-  opacity: 0;
-}
-.slide.slide:hover {
-  background-color: #99E2D0;
+.checked {
+  font-size: 20px;
+  background-clip: text;
+  background: #99E2D0;
+  margin-left: 15px;
+  margin-right: -64px;
+  padding: 20px 20px;
   border-radius: 0 15px 15px 0;
-  width: 59px;
-  opacity: 1;
-  height: 72.38px;
-  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  color: white;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/**
-.slide {
-    background-color: $brighter-green;
-    border-radius: 0 15px 15px 0;
-    width: 59px;
-    height: 72.38px;
-    opacity: 0;
-    &:hover {
-    opacity: 1;
-    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-}
-    **/
+/** Commander btn **/
 .btn-commander {
   display: flex;
   justify-content: center;
@@ -500,11 +620,9 @@ header {
 }
 
 /*** resume
--responsive ok (à ameliorer et terminer aujourd'hui)
--faire un <article> générique avec mixins (à commencer aujourd'hui)
--loader (full page à terminer aujourd'hui)
--animation des repas (dossier.scss + ajouter dans menu des restaurants)
--voir comment améliorer le code et veille
--travailler sur soutenance ***/
+-loader (revoir position index.html)
+-modifier index.html (marge blanche à droite)
+-rendre le code plus comprehensif
+ ***/
 
 /*# sourceMappingURL=style.css.map */

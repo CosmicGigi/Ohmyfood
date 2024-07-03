@@ -4,30 +4,39 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    @media screen and (min-width: 700px) and (max-width: 1440px) {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        height: 100px;
+    }
     h4 {
-        font-family: 'Shrikhand', cursive;
+        font-family: "Shrikhand", cursive;
         font-size: 18px;
         font-weight: 400;
         line-height: 26.24px;
         margin: 0;
+        @media screen and (min-width: 700px) and (max-width: 1440px) {
+            padding-left: 20px;
+        }
     }
 }
-/***
-@media (min-width: 680px) and (max-width: 1440px) {
-    footer {
-        flex-direction: row-reverse;
-        
-    }
-}
-***/
+
 .footer__index {
     font-size: 16px;
     font-weight: 400;
     line-height: 18.75px;
     ul {
         padding-left: 20px;
+        @media screen and (min-width: 700px) and (max-width: 1440px) {
+            display: flex;
+            gap: 10px;
+        }
+
         li {
             padding-bottom: 8px;
+            @media screen and (min-width: 700px) and (max-width: 1440px) {
+            padding-bottom: 0;
+            }
         }
     }
 }
@@ -37,7 +46,7 @@ footer {
 }
 
 .index__bold {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     margin-left: 5px;
 }
