@@ -168,7 +168,7 @@ li {
   flex-direction: column;
   justify-content: space-around;
 }
-@media screen and (min-width: 700px) and (max-width: 1440px) {
+@media screen and (min-width: 700px) {
   .howto {
     height: 220px;
   }
@@ -401,11 +401,15 @@ footer h4 {
 }
 
 body {
-  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .menu-container {
   width: 100%;
+  margin: 0;
+  background: #F6F6F6;
+  box-sizing: border-box;
 }
 
 .header-menu {
@@ -530,6 +534,7 @@ h3 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   overflow: hidden;
   width: 349px;
+  cursor: pointer;
 }
 @media screen and (min-width: 700px) and (max-width: 1440px) {
   .menu-card {
