@@ -1,12 +1,12 @@
-/*** shadow ***/
-@mixin light-shadow {
-    box-shadow: 4px 15px 0px rgba(0, 0, 0, 0.15);
+@mixin columnGlobal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@mixin medium-shadow {
-    box-shadow: 4px 15px 0px rgba(0, 0, 0, 0.25);
-}
-
-@mixin dark-shadow {
-    box-shadow: 4px 15px 0px rgba(0, 0, 0, 0.35);
+@mixin rowGlobal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

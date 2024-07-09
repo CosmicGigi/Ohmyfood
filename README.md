@@ -1,6 +1,7 @@
 <h1>OhMYFOOD</h1>
 
 <h2>//INFORMATION IMPORTANTE AVANT UTILISATION DU REPO\\<h2>
+
 <p>Pour compiler SASS et CSS, veuillez faire la manipulation ci-dessous<br>
 - Télécharger le repo<br>
 - Ouvrir le repo sur VS Code<br>

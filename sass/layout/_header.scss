@@ -1,14 +1,16 @@
 .logo {
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    box-shadow: 4px 15px 0px rgba(0, 0, 0, 0.15);
+    @include columnGlobal;
+    height: 63px;
+    width: 100%;
+    position: relative;
     img {
         padding: 15px;
         width: 197px;
-        @media screen and (min-width: 700px) and (max-width: 1440px) {
-            padding: 30px;
+        @media screen and (width >= 700px) {
+            padding: 25px;
             width: 200px;
         }
     }
 }
+
+//try new CSS media query synthax
