@@ -7,7 +7,7 @@
     background-color: #EAEAEA;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
     position: relative;
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 1000px) {
         box-shadow: none;
     }
     .location__icon {
@@ -35,12 +35,14 @@
         font-weight: 700;
         line-height: 28.13px;
         padding: 30px 0;
-        @media screen and (min-width: 700px) {
+        @media screen and (min-width: 1000px) {
             font-size: 40px;
         }
     }
 }
-
+.explore p {
+    text-wrap: wrap;
+}
 .explore a {
     font-size: 18px;
     font-weight: 300;
@@ -87,7 +89,7 @@
         font-weight: 700;
         line-height: 28.13px;
     }
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 1000px) {
         height: 220px;
     }
     
@@ -99,7 +101,7 @@
     @include columnGlobal;
     padding: 30px 30px;
     gap: 30px;
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 1000px) {
         flex-direction: row;
         justify-content: center;
     }
@@ -114,19 +116,22 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 18.75px;
-        @media screen and (min-width: 700px) {
+        position: relative;
+        @media screen and (min-width: 1000px) {
             width: 100%;
         }
         p {
+            margin-top: 18px;
             padding: 8px;
+            text-wrap: wrap;
         }
     }
 }
 
 .icon__nbr {
-    position: relative;
+    position: absolute;
     top: 35%;
-    right: 50%;
+    right: 100%;
     border-radius: 50%;
     background-color: $purple;
     color: $white;
@@ -134,10 +139,6 @@
     font-weight: 500;
     line-height: 16.62px;
     padding: 3px 6px;
-    @media screen and (min-width: 700px) {
-        margin: 0 20px;
-    }
-
 }
 
 .icon__howto {
@@ -161,7 +162,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 30px 0;
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 1000px) {
         flex-direction: row;
     }
         .card {
@@ -170,7 +171,7 @@
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         border-radius: 15px;
         margin-bottom: 20px;
-        @media screen and (min-width: 700px) {
+        @media screen and (min-width: 1000px) {
         width: 490px;
         }
         img {
@@ -218,7 +219,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 16.41px;
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 1000px) {
         left: 370px;
     }
     p {
@@ -232,7 +233,7 @@
     display: inline-block;
     bottom: 45px;
     left: 280px;
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 1000px) {
         left: 420px;
     }
 }
