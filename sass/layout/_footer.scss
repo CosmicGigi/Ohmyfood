@@ -4,7 +4,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 1000px) {
         flex-direction: row-reverse;
         align-items: flex-end;
         height: 100px;
@@ -15,7 +15,7 @@ footer {
         font-weight: 400;
         line-height: 26.24px;
         margin: 0;
-        @media screen and (min-width: 750px) {
+        @media screen and (min-width: 1000px) {
             padding-left: 20px;
         }
     }
@@ -28,14 +28,14 @@ footer {
     padding-top: 10px;
     ul {
         padding-left: 20px;
-        @media screen and (min-width: 750px) {
+        @media screen and (min-width: 1000px) {
             display: flex;
             gap: 10px;
         }
 
         li {
             padding-bottom: 8px;
-            @media screen and (min-width: 750px) {
+            @media screen and (min-width: 1000px) {
             padding-bottom: 0;
             }
         }
